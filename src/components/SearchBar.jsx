@@ -14,7 +14,7 @@ const SearchBar = ({ onSearch }) => {
             const data = await response.json();
 
             // Zweiter Fetch für jede ID
-            const detailsPromises = data.objectIDs.map(async (id) => {
+            const detailsPromises = data.objectIDs.slice(0, 40).map(async (id) => {
                 try {
                     const detailResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`);
                     if (!detailResponse.ok) {
@@ -31,7 +31,7 @@ const SearchBar = ({ onSearch }) => {
             const details = await Promise.all(detailsPromises);
 
             // Callback an die übergeordnete Komponente senden
-            onSearch(details.filter(detail => detail !== null));
+            onSearch(details.filter(detail => detail !== null && detail.primaryImage !== undefined && detail.primaryImage !== ""));
         } catch (error) {
             console.error('Error fetching data:', error);
         }
