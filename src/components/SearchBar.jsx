@@ -23,7 +23,6 @@ const SearchBar = ({ onSearch }) => {
                     return await detailResponse.json();
                 } catch (detailError) {
                     console.error(detailError);
-                    console.error(detailError);
                     return null
 
                 }
