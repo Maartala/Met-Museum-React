@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './SearchBar.css'
 
 const SearchBar = ({ onSearch }) => {
     const [input, setInput] = useState('');
@@ -10,8 +11,9 @@ const SearchBar = ({ onSearch }) => {
     const handleSearch = async () => {
         try {
             // Erster Fetch, um die IDs zu erhalten
-            const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${input}`);
+            const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&q=${input}`);
             const data = await response.json();
+            console.log(data);
 
             // Zweiter Fetch für jede ID
             const detailsPromises = data.objectIDs.slice(0, 40).map(async (id) => {
@@ -37,11 +39,12 @@ const SearchBar = ({ onSearch }) => {
         }
     };
 
+
     return (
-        <div>
-            <input type="text" value={input} onChange={handleInputChange} />
-            <button onClick={handleSearch}>Search</button>
-        </div>
+        <section className='searchWrapper'>
+            <input className='input' type="text" placeholder='Type to explore the Collection' value={input} onChange={handleInputChange} />
+            <button className='searchButton' onClick={handleSearch}>Search</button>
+        </section>
     );
 };
 

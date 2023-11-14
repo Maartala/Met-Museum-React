@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './Home.css';
+
 import SearchBar from '../components/SearchBar';
 import MetList from '../components/MetList';
 
@@ -7,13 +9,15 @@ const Home = () => {
 
     const handleSearch = (results) => {
         setSearchResults(results);
+        console.log(results);
     };
 
     return (
-        <div>
+        <section>
+            <h1>The Metropolitan Museum of Art</h1>
             <SearchBar onSearch={handleSearch} />
             <MetList searchResults={searchResults} />
-        </div>
+        </section>
     );
 };
 

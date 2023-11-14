@@ -1,4 +1,5 @@
-import MetItem from "./MetItem"
+import MetItem from './MetItem';
+import './MetList.css';
 
 const MetList = ({ searchResults }) => {
     return (
