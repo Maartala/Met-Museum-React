@@ -1,14 +1,20 @@
-import MetDetails from "../components/MetDetails";
-import MetList from "../components/MetList";
-import SearchBar from "../components/SearchBar";
+import React, { useState } from 'react';
+import SearchBar from '../components/SearchBar';
+import MetList from '../components/MetList';
 
 const Home = () => {
+    const [searchResults, setSearchResults] = useState([]);
+
+    const handleSearch = (results) => {
+        setSearchResults(results);
+    };
+
     return (
         <div>
-            <SearchBar />
-            <MetList />
+            <SearchBar onSearch={handleSearch} />
+            <MetList searchResults={searchResults} />
         </div>
     );
-}
+};
 
 export default Home;
