@@ -11,7 +11,7 @@ const SearchBar = ({ onSearch }) => {
     const handleSearch = async () => {
         try {
             // Erster Fetch, um die IDs zu erhalten
-            const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&q=${input}`);
+            const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${input}`);
             const data = await response.json();
             console.log(data);
 
