@@ -3,7 +3,7 @@ import './MetList.css';
 
 const MetList = ({ searchResults }) => {
     return (
-        <div>
+        <section className='resultListGrid'>
             {searchResults.map((result, i) => (
                 <MetItem
                     key={i}
@@ -11,7 +11,7 @@ const MetList = ({ searchResults }) => {
                 />
             ))}
 
-        </div>
+        </section>
     );
 };
 
