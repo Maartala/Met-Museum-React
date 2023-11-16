@@ -9,7 +9,7 @@ const MetItem = ({ result }) => {
             </div>
             <div className='infoWrapper'>
                 <h4 className='cardArtist'>{result.artistDisplayName ? result.artistDisplayName : 'Artist unknown'}</h4>
-                <p className='cardTitle'>{result.title}</p>
+                <p className='cardTitle'>{result.title ? result.title : 'Title unknown'}</p>
             </div>
 
         </article>
