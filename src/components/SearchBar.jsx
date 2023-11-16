@@ -8,6 +8,12 @@ const SearchBar = ({ onSearch }) => {
         setInput(e.target.value);
     };
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            handleSearch();
+        }
+    }
+
     const handleSearch = async () => {
         try {
             // Erster Fetch, um die IDs zu erhalten
@@ -42,7 +48,14 @@ const SearchBar = ({ onSearch }) => {
 
     return (
         <section className='searchWrapper'>
-            <input className='input' type="text" placeholder='Type to explore the Collection' value={input} onChange={handleInputChange} />
+            <input
+                className='input'
+                type="text"
+                placeholder='Type to explore the Collection'
+                value={input}
+                onChange={handleInputChange}
+                onKeyDown={handleKeyDown}
+            />
             <button className='searchButton' onClick={handleSearch}>Search</button>
         </section>
     );
