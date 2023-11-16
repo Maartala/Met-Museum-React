@@ -56,7 +56,7 @@ const SearchBar = ({ onSearch }) => {
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
             />
-            <button className='searchButton' onClick={handleSearch}>Search</button>
+            {/* <button className='searchButton' onClick={handleSearch}>Search</button> */}
         </section>
     );
 };
