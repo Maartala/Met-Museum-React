@@ -1,16 +1,20 @@
 .listItem {
-    width: 250px;
     border-radius: 10px;
-    height: 300px;
+    height: 370px;
     border-radius: 20px;
+
 }
 
 .imageWrapper {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 100%;
+    height: 80%;
+    border-radius: 10px 10px 0 0;
+}
+
+.imgSmall {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
 
@@ -23,6 +27,7 @@
 
 .cardArtist {
     font-size: 1.5rem;
+    font-weight: 600;
     padding: 0.3rem;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -37,4 +42,5 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
+    height: 20%;
 }
