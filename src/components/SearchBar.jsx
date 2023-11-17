@@ -1,11 +1,14 @@
 import { useState } from 'react';
 
-// ping.register()
+import { ping } from 'ldrs'
+ping.register('l-ping');
+
+
 import './SearchBar.css'
 
-const SearchBar = ({ onSearch, setIsLoading }) => {
+const SearchBar = ({ onSearch }) => {
     const [input, setInput] = useState('');
-    // const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleInputChange = (e) => {
         setInput(e.target.value);
@@ -52,18 +55,26 @@ const SearchBar = ({ onSearch, setIsLoading }) => {
 
 
     return (
-        <section className='searchWrapper'>
-            <input
-                className='input'
-                type="text"
-                placeholder='Type to explore the Collection'
-                value={input}
-                onChange={handleInputChange}
-                onKeyDown={handleKeyDown}
-            />
-            {/* <button className='searchButton' onClick={handleSearch}>Search</button> */}
-
-        </section>
+        <div>
+            <section className='searchWrapper'>
+                <input
+                    className='input'
+                    type="text"
+                    placeholder='Type to explore the Collection'
+                    value={input}
+                    onChange={handleInputChange}
+                    onKeyDown={handleKeyDown}
+                />
+                {/* <button className='searchButton' onClick={handleSearch}>Search</button> */}
+            </section>
+            <div className='loaderContainer'>
+                {isLoading && <l-ping
+                    size="45"
+                    speed="2"
+                    color="black"
+                ></l-ping>}
+            </div>
+        </div>
     );
 };
 
