@@ -21,5 +21,6 @@ input:focus {
 
 .loaderContainer {
     position: absolute;
-    left: 48.7%;
+    left: 46%;
+    margin-top: 2rem;
 }

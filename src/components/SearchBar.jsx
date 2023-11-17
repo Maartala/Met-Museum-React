@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { ping } from 'ldrs'
-ping.register('l-ping');
+import { mirage } from 'ldrs'
+mirage.register('my-mirage');
 
 
 import './SearchBar.css'
@@ -68,11 +68,11 @@ const SearchBar = ({ onSearch }) => {
                 {/* <button className='searchButton' onClick={handleSearch}>Search</button> */}
             </section>
             <div className='loaderContainer'>
-                {isLoading && <l-ping
-                    size="45"
-                    speed="2"
-                    color="black"
-                ></l-ping>}
+                {isLoading && <my-mirage
+                    size="70"
+                    speed="4.0"
+                    color="#E4012B"
+                ></my-mirage>}
             </div>
         </div>
     );
