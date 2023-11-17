@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
+// ping.register()
 import './SearchBar.css'
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, setIsLoading }) => {
     const [input, setInput] = useState('');
+    // const [isLoading, setIsLoading] = useState(false);
 
     const handleInputChange = (e) => {
         setInput(e.target.value);
@@ -16,6 +19,7 @@ const SearchBar = ({ onSearch }) => {
 
     const handleSearch = async () => {
         try {
+            setIsLoading(true)
             // Erster Fetch, um die IDs zu erhalten
             const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${input}`);
             const data = await response.json();
@@ -32,7 +36,6 @@ const SearchBar = ({ onSearch }) => {
                 } catch (detailError) {
                     console.error(detailError);
                     return null
-
                 }
             });
 
@@ -42,6 +45,8 @@ const SearchBar = ({ onSearch }) => {
             onSearch(details.filter(detail => detail !== null && detail.primaryImage !== undefined && detail.primaryImage !== ""));
         } catch (error) {
             console.error('Error fetching data:', error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -57,6 +62,7 @@ const SearchBar = ({ onSearch }) => {
                 onKeyDown={handleKeyDown}
             />
             {/* <button className='searchButton' onClick={handleSearch}>Search</button> */}
+
         </section>
     );
 };
