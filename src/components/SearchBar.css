@@ -18,3 +18,8 @@ input {
 input:focus {
     outline: none;
 }
+
+.loaderContainer {
+    position: absolute;
+    left: 48.7%;
+}
