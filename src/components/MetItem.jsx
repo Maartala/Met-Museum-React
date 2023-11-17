@@ -29,8 +29,6 @@ const MetItem = ({ result }) => {
     }
 
 
-
-
     return (
         <article
             className='listItem'
