@@ -4,6 +4,22 @@
     justify-content: center;
 }
 
+.metLogoContainer {
+    position: absolute;
+    height: 40px;
+    top: 0;
+    border-radius: 50px;
+    background-color: #ffffff;
+    margin: 5px;
+}
+
+.metLogoContainer>img {
+    height: 100%;
+    color: #ffffff;
+    padding: 8px;
+}
+
+
 .HeaderContainer>h1 {
     height: 5rem;
     background-color: var(--met-red-dark);
@@ -26,6 +42,6 @@
 .HeaderImgContainer>p {
     font-size: 4rem;
     font-weight: 600;
-    color: var(--met-red-medium);
+    color: var(--met-red);
     padding: 0 0 6rem 6%
 }
