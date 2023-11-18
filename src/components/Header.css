@@ -1,12 +1,6 @@
 .HeaderImgContainer {
     height: 30vh;
     margin-bottom: 3%;
-
-}
-
-.HeaderImgContainer>img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
 }
