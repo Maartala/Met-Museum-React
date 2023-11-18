@@ -18,6 +18,12 @@
     src: url("../src/assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
 
+:root {
+    --met-red: #e4002b;
+    --met-red-medium: #a6192e;
+    --met-red-dark: #6e182e;
+}
+
 
 * {
     box-sizing: border-box;

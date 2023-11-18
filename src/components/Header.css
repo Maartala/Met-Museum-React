@@ -6,7 +6,7 @@
 
 .HeaderContainer>h1 {
     height: 5rem;
-    background-color: #9D2430;
+    background-color: var(--met-red-dark);
     color: #ffffff;
     font-size: 2rem;
     font-weight: 300;
@@ -19,11 +19,13 @@
     margin-bottom: 3%;
     background-position: center;
     background-size: cover;
+    display: flex;
+    align-items: center;
 }
 
 .HeaderImgContainer>p {
     font-size: 4rem;
     font-weight: 600;
-    color: #9D2430;
-    padding: 6% 0 0 6%
+    color: var(--met-red-medium);
+    padding: 0 0 6rem 6%
 }

@@ -71,7 +71,7 @@ const SearchBar = ({ onSearch }) => {
                 {isLoading && <my-mirage
                     size="70"
                     speed="4.0"
-                    color="#E4012B"
+                    color="var(--met-red-dark)"
                 ></my-mirage>}
             </div>
         </div>
