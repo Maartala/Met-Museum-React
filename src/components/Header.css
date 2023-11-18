@@ -1,6 +1,29 @@
+.HeaderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.HeaderContainer>h1 {
+    height: 5rem;
+    background-color: #9D2430;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 1rem;
+}
+
 .HeaderImgContainer {
-    height: 30vh;
+    height: 40vh;
     margin-bottom: 3%;
     background-position: center;
     background-size: cover;
+}
+
+.HeaderImgContainer>p {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #9D2430;
+    padding: 6% 0 0 6%
 }

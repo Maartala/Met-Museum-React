@@ -15,7 +15,6 @@ const Home = () => {
 
     return (
         <section>
-            <h1>The Metropolitan Museum of Art</h1>
             <Header />
             <SearchBar onSearch={handleSearch} />
             <MetList searchResults={searchResults} />
