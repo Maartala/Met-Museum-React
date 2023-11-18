@@ -3,6 +3,7 @@ import './Home.css';
 
 import SearchBar from '../components/SearchBar';
 import MetList from '../components/MetList';
+import Header from '../components/Header'
 
 const Home = () => {
     const [searchResults, setSearchResults] = useState([]);
@@ -15,6 +16,7 @@ const Home = () => {
     return (
         <section>
             <h1>The Metropolitan Museum of Art</h1>
+            <Header />
             <SearchBar onSearch={handleSearch} />
             <MetList searchResults={searchResults} />
         </section>
