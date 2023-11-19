@@ -7,7 +7,7 @@ const Header = () => {
                 <img src="/MetLogo.png" alt="Logo" />
             </div>
             <h1>The Metropolitan Museum of Modern Art</h1>
-            <div className="HeaderImgContainer" style={{ backgroundImage: `url(/Met_Fifth_Ave.jpg)` }}>
+            <div className="HeaderImgContainer" style={{ backgroundImage: `url(/met-dark.jpeg)` }}>
                 {/* <img src="https://images.metmuseum.org/CRDImages/ep/original/DT1567.jpg" alt="Wheat Field with Cypresses" /> */}
                 <p>Explore <br /> the Collection <br /> virtually</p>
             </div>
