@@ -1,8 +1,13 @@
+.detailsLink {
+    text-decoration: none;
+    color: black;
+}
+
 .listItem {
     border-radius: 10px;
-    height: 370px;
+    height: 340px;
     border-radius: 20px;
-    box-shadow: 0px 0px 8px #ddd;
+    box-shadow: 0px 9px 8px #696969;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }

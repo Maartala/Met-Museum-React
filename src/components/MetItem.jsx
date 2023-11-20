@@ -31,7 +31,7 @@ const MetItem = ({ result }) => {
 
 
     return (
-        <Link to={`/${result.objectID}`} state={result}>
+        <Link className='detailsLink' to={`/${result.objectID}`} state={result}>
             <article
                 className='listItem'
                 style={listItemStyle}
