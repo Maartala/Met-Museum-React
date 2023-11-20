@@ -29,7 +29,7 @@ const SearchBar = ({ onSearch }) => {
             console.log(data);
 
             // Zweiter Fetch für jede ID
-            const detailsPromises = data.objectIDs.slice(0, 40).map(async (id) => {
+            const detailsPromises = data.objectIDs.slice(0, 50).map(async (id) => {
                 try {
                     const detailResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`);
                     if (!detailResponse.ok) {
@@ -72,7 +72,7 @@ const SearchBar = ({ onSearch }) => {
                     size="70"
                     speed="4.0"
                     color="var(--met-red-dark)"
-                ></my-mirage>}
+                />}
             </div>
         </div>
     );
