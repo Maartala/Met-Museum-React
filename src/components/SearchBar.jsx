@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import lupe from '../assets/img/lupe-grau.png';
 
 import { mirage } from 'ldrs'
 mirage.register('my-mirage');
@@ -65,7 +66,8 @@ const SearchBar = ({ onSearch }) => {
                     onChange={handleInputChange}
                     onKeyDown={handleKeyDown}
                 />
-                {/* <button className='searchButton' onClick={handleSearch}>Search</button> */}
+                <button className='searchButton' onClick={handleSearch}><img className='lensImg' src={lupe} />
+                </button>
             </section>
             <div className='loaderContainer'>
                 {isLoading && <my-mirage
