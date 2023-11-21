@@ -18,6 +18,11 @@ const MetItem = ({ result }) => {
         // height: hovered ? 'auto' : '370px'
     }
 
+    const imgSmallStyle = {
+        // transform: hovered ? 'scale(1.1)' : 'scale(1)',
+        // transition: 'transform 0.3s ease-in-out',
+    }
+
     const cardArtistStyle = {
         whiteSpace: hovered ? 'auto' : 'nowrap',
         // height: hovered ? 'auto' : 'inherit'
@@ -41,6 +46,7 @@ const MetItem = ({ result }) => {
                 <div className='imageWrapper' >
                     <img
                         className='imgSmall'
+                        style={imgSmallStyle}
                         src={result.primaryImageSmall} alt={result.title ? result.title : 'Title unknown'}
                     />
                 </div>
