@@ -66,7 +66,7 @@ const SearchBar = ({ onSearch }) => {
                     onChange={handleInputChange}
                     onKeyDown={handleKeyDown}
                 />
-                <button className='searchButton' onClick={handleSearch}><img className='lensImg' src={lupe} />
+                <button className='searchButton' onClick={handleSearch}><img className='lensImg' src={lupe} alt='search-button' />
                 </button>
             </section>
             <div className='loaderContainer'>
