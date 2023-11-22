@@ -1,7 +1,10 @@
+import { useSearchContext } from './SearchContext';
 import MetItem from './MetItem';
 import './MetList.css';
 
-const MetList = ({ searchResults }) => {
+const MetList = () => {
+    const { searchResults } = useSearchContext()
+
     return (
         <section className='resultListGrid'>
             {searchResults.map((result, i) => (

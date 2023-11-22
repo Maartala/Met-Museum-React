@@ -11,8 +11,8 @@ import Header from '../components/Header'
 import { useSearchContext } from '../components/SearchContext';
 
 const Home = () => {
-    const { input, setInput } = useSearchContext();
-    const [searchResults, setSearchResults] = useState([]);
+    const { input, setInput, searchResults, setSearchResults } = useSearchContext();
+    // const [searchResults, setSearchResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
     const handleInputChange = (e) => {

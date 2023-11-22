@@ -6,10 +6,11 @@ const SearchContext = createContext();
 // einen Context-Provider verwenden, um den Input-Value bereitzustellen
 export const SearchProvider = ({ children }) => {
     const [input, setInput] = useState('');
+    const [searchResults, setSearchResults] = useState([])
 
 
     return (
-        <SearchContext.Provider value={{ input, setInput }}>
+        <SearchContext.Provider value={{ input, setInput, searchResults, setSearchResults }}>
             {children}
         </SearchContext.Provider>
     );
