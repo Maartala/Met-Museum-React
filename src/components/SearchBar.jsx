@@ -1,14 +1,16 @@
 import { useState } from 'react';
+import axios from 'axios';
+import { useSearchContext } from './SearchContext.jsx'
+
 import lupe from '../assets/img/lupe-grau.png';
+import './SearchBar.css'
 
 import { mirage } from 'ldrs'
 mirage.register('my-mirage');
 
 
-import './SearchBar.css'
-
 const SearchBar = ({ onSearch }) => {
-    const [input, setInput] = useState('');
+    const { input, setInput } = useSearchContext();
     const [isLoading, setIsLoading] = useState(false);
 
     const handleInputChange = (e) => {
@@ -25,20 +27,18 @@ const SearchBar = ({ onSearch }) => {
         try {
             setIsLoading(true)
             // Erster Fetch, um die IDs zu erhalten
-            const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${input}`);
-            const data = await response.json();
+            const response = await axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${input}`);
+            const data = response.data;
             console.log(data);
 
             // Zweiter Fetch für jede ID
             const detailsPromises = data.objectIDs.slice(0, 50).map(async (id) => {
                 try {
-                    const detailResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`);
-                    if (!detailResponse.ok) {
-                        throw new Error(`Error fetching details for object with ID ${id}: ${detailResponse.status} - ${detailResponse.statusText}`)
-                    }
-                    return await detailResponse.json();
+                    const detailResponse = await axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`);
+                    const detailData = detailResponse.data;
+                    return detailData
                 } catch (detailError) {
-                    console.error(detailError);
+                    console.error(`Error fetching details for object with ID ${id}`, detailError);
                     return null
                 }
             });
