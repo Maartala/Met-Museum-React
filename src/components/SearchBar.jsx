@@ -14,6 +14,10 @@ const SearchBar = ({ onInputChange, onKeyDown, onSearch }) => {
         // onInputChange(e)
     };
 
+    const handleClearClick = () => {
+        setInput('');
+    }
+
     return (
         <div>
             <section className='searchWrapper'>
@@ -25,6 +29,11 @@ const SearchBar = ({ onInputChange, onKeyDown, onSearch }) => {
                     onChange={handleInputChange}
                     onKeyDown={onKeyDown}
                 />
+                {input && (
+                    <button className='clearButton' onClick={handleClearClick}>
+                        X
+                    </button>
+                )}
                 <button className='searchButton' onClick={onSearch}><img className='lensImg' src={lupe} alt='search-button' />
                 </button>
             </section>
