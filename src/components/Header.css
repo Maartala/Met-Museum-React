@@ -4,34 +4,9 @@
     justify-content: center;
 }
 
-.metLogoContainer {
-    position: absolute;
-    height: 40px;
-    top: 0;
-    border-radius: 50px;
-    background-color: #ffffff;
-    margin: 5px;
-}
-
-.metLogoContainer>img {
-    height: 100%;
-    color: #ffffff;
-    padding: 8px;
-}
-
-
-.HeaderContainer>h1 {
-    height: 5rem;
-    background-color: var(--met-red-dark);
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: center;
-    padding-top: 1rem;
-}
-
 .HeaderImgContainer {
     height: 45vh;
+    margin-top: 6rem;
     margin-bottom: 3%;
     background-position: 50% 45%;
     background-size: 105%;

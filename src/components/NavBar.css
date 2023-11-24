@@ -1,0 +1,30 @@
+.navBarContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.metLogoContainer {
+    position: absolute;
+    height: 40px;
+    top: 0;
+    border-radius: 50px;
+    background-color: #ffffff;
+    margin: 1rem;
+}
+
+.metLogoContainer>img {
+    height: 100%;
+    color: #ffffff;
+    padding: 8px;
+}
+
+.headline {
+    height: 6rem;
+    background-color: var(--met-red-dark);
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 1.8rem;
+}
