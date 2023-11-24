@@ -5,7 +5,7 @@
     background-color: #ffffff;
     width: 40rem;
     box-shadow: 0px 0px 8px #ddd;
-    border-radius: 7px;
+    border-radius: 5px;
     margin: 4rem auto;
     padding: 0 15px;
 }
@@ -25,7 +25,7 @@ input:focus {
 .clearButton {
     color: grey;
     background-color: #ffffff;
-    font-weight: 500;
+    font-weight: 540;
     font-size: 1.5rem;
     border: none;
     margin-right: 1.5rem;

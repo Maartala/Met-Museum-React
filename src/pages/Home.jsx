@@ -59,7 +59,7 @@ const Home = () => {
     };
 
     return (
-        <section>
+        <main>
             <Header />
             <SearchBar
                 value={input}
@@ -75,7 +75,7 @@ const Home = () => {
                 />}
             </div>
             <MetList searchResults={searchResults} />
-        </section>
+        </main>
     );
 };
 
