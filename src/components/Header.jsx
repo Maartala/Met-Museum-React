@@ -4,11 +4,11 @@ import logo from '../assets/img/MetLogo.png'
 
 const Header = () => {
     return (
-        <header className='HeaderContainer'>
+        <header className='headerContainer'>
             <NavBar />
-            <div className="HeaderImgContainer" style={{ backgroundImage: `url(https://images.metmuseum.org/CRDImages/as/original/DP-15583-014.jpg)` }}>
+            <div className="headerImgContainer" style={{ backgroundImage: `url(https://images.metmuseum.org/CRDImages/as/original/DP-15583-014.jpg)` }}>
                 {/* <img src="https://images.metmuseum.org/CRDImages/ep/original/DT1567.jpg" alt="Wheat Field with Cypresses" /> */}
-                <p>Explore <br /> the Collection <br /> virtually</p>
+                <p className="introText">Explore <br /> the Collection <br /> virtually</p>
             </div>
         </header>
     );

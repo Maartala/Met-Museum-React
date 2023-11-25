@@ -1,10 +1,10 @@
-.HeaderContainer {
+.headerContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.HeaderImgContainer {
+.headerImgContainer {
     height: 45vh;
     margin-top: 6rem;
     margin-bottom: 3%;
@@ -16,7 +16,7 @@
     /* margin: 0 55px; */
 }
 
-.HeaderImgContainer>p {
+.introText {
     font-size: 4.4rem;
     font-weight: 700;
     /* color: var(--met-red-dark); */

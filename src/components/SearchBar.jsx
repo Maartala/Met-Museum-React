@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useSearchContext } from './SearchContext';
 
+import deleteIcon from '../assets/img/delete-icon.png';
 import lupe from '../assets/img/lupe-grau.png';
 import './SearchBar.css'
 
 
-const SearchBar = ({ onInputChange, onKeyDown, onSearch }) => {
+const SearchBar = ({ onKeyDown, onSearch }) => {
     const { input, setInput } = useSearchContext();
 
 
@@ -31,7 +32,7 @@ const SearchBar = ({ onInputChange, onKeyDown, onSearch }) => {
                 />
                 {input && (
                     <button className='clearButton' onClick={handleClearClick}>
-                        X
+                        <img className='deleteItem' src={deleteIcon} alt='delete-button' />
                     </button>
                 )}
                 <button className='searchButton' onClick={onSearch}><img className='lensImg' src={lupe} alt='search-button' />
