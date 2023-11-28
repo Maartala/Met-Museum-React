@@ -50,11 +50,12 @@ const Home = () => {
 
             // Callback an die übergeordnete Komponente senden
             setSearchResults(details.filter(detail => detail !== null && detail.primaryImage !== undefined && detail.primaryImage !== ""));
-            console.log([searchResults]);
+
         } catch (error) {
             console.error('Error fetching data:', error);
         } finally {
             setIsLoading(false);
+            console.log(searchResults);
         }
     };
 

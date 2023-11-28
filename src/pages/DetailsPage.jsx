@@ -17,7 +17,9 @@ const DetailsPage = () => {
             <h2>Artist: {artwork.artistDisplayName ? artwork.artistDisplayName : 'Artist unknown'}</h2>
             <p>{artwork.objectName}</p>
             <p>Medium: {artwork.medium}</p>
-            <p>Measurements (h/w): {artwork.measurements[0].elementMeasurements.Height} cm/ {artwork.measurements[0].elementMeasurements.Width} cm</p>
+
+            {/*TO DO:  Error handling in case artwork.measurements : null */}
+            <p>Measurements (h/w): {artwork.measurements[0].elementMeasurements.Height ? artwork.memasurements[0].elementMeasurements.Height : '?'} cm/ {artwork.measurements[0].elementMeasurements.Width ? artwork.measurements[0].elementMeasurements.Width : '?'} cm</p>
             <p>Date: {artwork.objectDate}</p>
             <p>Culture: {artwork.culture}</p>
             <p>{artwork.creditLine}</p>
