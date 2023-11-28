@@ -1,6 +1,5 @@
 import NavBar from './NavBar';
 import './Header.css'
-import logo from '../assets/img/MetLogo.png'
 
 const Header = () => {
     return (
