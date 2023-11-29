@@ -6,7 +6,6 @@ const Header = () => {
         <header className='headerContainer'>
             <NavBar />
             <div className="headerImgContainer" style={{ backgroundImage: `url(https://images.metmuseum.org/CRDImages/as/original/DP-15583-014.jpg)` }}>
-                {/* <img src="https://images.metmuseum.org/CRDImages/ep/original/DT1567.jpg" alt="Wheat Field with Cypresses" /> */}
                 <p className="introText">Explore <br /> the Collection <br /> virtually</p>
             </div>
         </header>

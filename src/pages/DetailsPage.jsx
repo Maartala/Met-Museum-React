@@ -19,7 +19,8 @@ const DetailsPage = () => {
             <p>Medium: {artwork.medium}</p>
 
             {/*TO DO:  Error handling in case artwork.measurements : null */}
-            <p>Measurements (h/w): {artwork.measurements[0].elementMeasurements.Height ? artwork.memasurements[0].elementMeasurements.Height : '?'} cm/ {artwork.measurements[0].elementMeasurements.Width ? artwork.measurements[0].elementMeasurements.Width : '?'} cm</p>
+            {/* <p>Measurements (h/w): {artwork.measurements[0].elementMeasurements.Height ? artwork.memasurements[0].elementMeasurements.Height : '?'} cm/ {artwork.measurements[0].elementMeasurements.Width ? artwork.measurements[0].elementMeasurements.Width : '?'} cm</p> */}
+            <p>Measurements: {artwork.dimensions}</p>
             <p>Date: {artwork.objectDate}</p>
             <p>Culture: {artwork.culture}</p>
             <p>{artwork.creditLine}</p>

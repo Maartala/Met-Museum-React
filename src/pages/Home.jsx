@@ -55,7 +55,11 @@ const Home = () => {
             console.error('Error fetching data:', error);
         } finally {
             setIsLoading(false);
-            console.log(searchResults);
+
+            // console.log(searchResults);
+            setTimeout(() => {
+                console.log(searchResults);
+            }, "1000")
         }
     };
 
