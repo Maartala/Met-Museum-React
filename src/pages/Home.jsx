@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Home.css';
 
@@ -55,13 +55,12 @@ const Home = () => {
             console.error('Error fetching data:', error);
         } finally {
             setIsLoading(false);
-
-            // console.log(searchResults);
-            setTimeout(() => {
-                console.log(searchResults);
-            }, "1000")
         }
     };
+
+    useEffect(() => {
+        console.log(searchResults);
+    }, [searchResults])
 
     return (
         <main>
